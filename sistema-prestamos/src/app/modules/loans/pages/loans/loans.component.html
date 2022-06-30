@@ -1,1 +1,30 @@
-<p>loans works!</p>
+<header class="header">
+  <label class="header__text">Valor solicitado</label>
+  <label id="example-name-label" class="header__text--title">
+    ${{ value }}</label
+  >
+</header>
+
+<div
+  class="slider-container"
+  [class]="vertical ? 'example-label-vertical' : 'example-label-horizontal'"
+>
+  <label class="slider__text">{{ min }}</label>
+  <label class="slider__text">{{ max }}</label>
+</div>
+
+<mat-slider
+  class="example-margin"
+  [disabled]="disabled"
+  [invert]="invert"
+  [max]="max"
+  [min]="min"
+  [step]="step"
+  [thumbLabel]="thumbLabel"
+  [(ngModel)]="value"
+  [vertical]="vertical"
+  aria-labelledby="example-name-label"
+>
+</mat-slider>
+
+<!-- <label id="example-name-label" class="example-name-label">Valor solicitado</label> -->

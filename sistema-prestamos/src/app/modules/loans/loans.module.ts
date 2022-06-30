@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoansComponent } from './pages/loans/loans.component';
+import  {MatSliderModule } from '@angular/material/slider';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -9,7 +11,12 @@ import { LoansComponent } from './pages/loans/loans.component';
     LoansComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    MatSliderModule
+  ],
+  exports: [
+    LoansComponent
   ]
 })
 export class LoansModule { }
