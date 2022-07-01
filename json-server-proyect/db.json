@@ -1,0 +1,39 @@
+{
+  "loanList": [
+    {
+      "amount": 10000,
+      "name": "Andres",
+      "state": "aprobado"
+    },
+    {
+      "amount": 100000,
+      "name": "Andres",
+      "state": "aprobado"
+    },
+    {
+      "amount": 100000,
+      "name": "Andres",
+      "state": "noAprobado"
+    },
+    {
+      "amount": 100000,
+      "name": "Andres",
+      "state": "noAprobado"
+    },
+    {
+      "amount": 100000,
+      "name": "Andres",
+      "state": "noAprobado"
+    },
+    {
+      "amount": 100000,
+      "name": "Andres",
+      "state": "noAprobado"
+    },
+    {
+      "amount": 100000,
+      "name": "Andres",
+      "state": "noAprobado"
+    }
+  ]
+}

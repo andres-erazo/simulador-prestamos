@@ -1,0 +1,32 @@
+<header class="header">
+  <label class="header__text">Prestamo solicitado:</label>
+  <label id="example-name-label" class="header__text--title">
+    ${{ ammount }}</label
+  >
+</header>
+
+<div
+  class="slider-container example-label-horizontal"
+>
+  <label class="slider__text">${{ min }}</label>
+  <label class="slider__text">${{ max }}</label>
+</div>
+
+<!-- [invert]="invert" -->
+<form  [formGroup]="form">
+<mat-slider
+  class="example-margin"
+  [max]="max"
+  [min]="min"
+  [step]="step"
+  [thumbLabel]="thumbLabel"
+  formControlName="inputRequestValue"
+  aria-labelledby="example-name-label"
+>
+</mat-slider>
+<mat-error
+*ngIf="!form.get('inputRequestValue')?.valid"
+[innerHtml]="'Ingresa un valor'"
+>
+</mat-error>
+</form>
