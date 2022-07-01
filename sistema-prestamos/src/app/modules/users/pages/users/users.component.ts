@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-users',
@@ -7,6 +7,18 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
+
+
+
+  // autoTicks = false;
+  // disabled = false;
+  // invert = false;
+  // showTicks = false;
+  // value = 0;
+  // vertical = false;
+  // tickInterval = 1;
+
+
   userForm!: FormGroup;
   loginDisplay = false;
   // public $login: Observable<ResponseLogin>
@@ -18,10 +30,11 @@ export class UsersComponent implements OnInit {
 
   ngOnInit(): void {
     this.userForm = new FormGroup({
-      nombre: new FormControl('' ),
-      correo: new FormControl('' ),
-      cedula: new FormControl('' )
-
+      nombre: new FormControl('', [ Validators.required ] ),
+      correo: new FormControl('', [ Validators.required ] ),
+      cedula: new FormControl('', [ Validators.required ] ),
+      requestValue:  new FormControl(''),
+      requestValue2:  new FormControl('')
     });
   }
 
@@ -31,7 +44,7 @@ export class UsersComponent implements OnInit {
    * @memberof UsersComponent
    */
   createUser(): void {
-
+    console.log(this.userForm.controls)
   }
 
 }

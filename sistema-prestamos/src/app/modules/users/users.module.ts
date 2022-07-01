@@ -8,6 +8,7 @@ import { LoansModule } from '../loans/loans.module';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { MatSliderModule } from '@angular/material/slider';
 
 
 @NgModule({
@@ -22,7 +23,9 @@ import {MatButtonModule} from '@angular/material/button';
     MatButtonModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    LoansModule
+    LoansModule,
+
+    MatSliderModule
   ]
 })
 export class UsersModule { }

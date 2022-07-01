@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoansComponent } from './pages/loans/loans.component';
 import  {MatSliderModule } from '@angular/material/slider';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 
@@ -13,7 +14,9 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
-    MatSliderModule
+    MatSliderModule,
+    ReactiveFormsModule,
+    MatFormFieldModule
   ],
   exports: [
     LoansComponent

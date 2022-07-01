@@ -1,38 +1,78 @@
+<div class="container">
+  <div class="login">
+    <header class="login__header">
+      <img
+        alt="user"
+        src="../../../../assets/icons/user.png"
+        class="login__user"
+      />
+      <p class="login__tittle">Nuevo usuario</p>
+    </header>
+    <form [formGroup]="userForm" class="login__form" (ngSubmit)="createUser()">
+      <mat-form-field appearance="fill" class="login__field">
+        <mat-label class="login__label">Nombre</mat-label>
+        <input
+          matInput
+          placeholder="Nombre"
+          formControlName="nombre"
+          class="login__input"
+          required
+        />
+        <mat-error
+          *ngIf="userForm.controls['nombre'].errors"
+          [innerHtml]="'Ingresa un nombre válido'"
+        >
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="login__field">
+        <mat-label class="login__label">Correo</mat-label>
+        <input
+          matInput
+          placeholder="Correo"
+          formControlName="correo"
+          class="login__input"
+          required
+        />
+        <mat-error
+          *ngIf="userForm.controls['correo'].errors"
+          [innerHtml]="'Ingresa un correo válido'"
+        >
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="login__field">
+        <mat-label class="login__label">Cédula</mat-label>
+        <input
+          matInput
+          placeholder="Cédula"
+          formControlName="cedula"
+          class="login__input"
+          required
+        />
+        <mat-error
+          *ngIf="userForm.controls['correo'].errors"
+          [innerHtml]="'Ingresa una cedula válida'"
+        >
+        </mat-error>
+      </mat-form-field>
+      <app-loans
+          formControlName="requestValue"
+          [id]="'requestValue'"
+          ></app-loans>
+          <!-- <mat-slider
+            [required]="true"
+            class="example-margin"
+            [invert]="invert"
+            [max]="max"
+            [min]="min"
+            [step]="step"
+            [thumbLabel]="thumbLabel"
+            [vertical]="vertical"
+            formControlName="requestValue2"
 
-    <div class="container">
-      <div class="login">
-        <header class="login__header">
-          <img alt="user" src="../../../../assets/icons/user.png" class="login__user">
-          <p class="login__tittle">Nuevo usuario</p>
-        </header>
-        <form [formGroup]= "userForm" class="login__form" (ngSubmit)="createUser()">
-          <mat-form-field appearance="fill" class="login__field">
-            <mat-label class="login__label" >Nombre</mat-label>
-            <input matInput placeholder="Nombre" formControlName="nombre"
-            class="login__input"
-             required>
-            <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-          </mat-form-field>
-          <mat-form-field appearance="fill" class="login__field">
-            <mat-label class="login__label" >Correo</mat-label>
-            <input matInput placeholder="Correo" formControlName="correo"
-            class="login__input"
-             required>
-            <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-          </mat-form-field>
-          <mat-form-field appearance="fill" class="login__field">
-            <mat-label class="login__label" >Cédula</mat-label>
-            <input matInput placeholder="Cédula" formControlName="cedula"
-            class="login__input"
-             required>
-            <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-          </mat-form-field>
-          <app-loans></app-loans>
-        <button mat-raised-button color="primary">Crear</button>
-      </form>
-      </div>
-
-    </div>
-
-
-
+            aria-labelledby="example-name-label"
+          >
+</mat-slider> -->
+      <button mat-raised-button color="primary">Crear</button>
+    </form>
+  </div>
+</div>
